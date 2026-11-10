@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./architectural-v2.css";
 export const metadata: Metadata = {
   title: "FORMA | استودیو معماری فرما",
   description: "استودیو معماری و طراحی داخلی فرما؛ فضاهایی که احساس و عملکرد را به هم پیوند می‌زنند.",
