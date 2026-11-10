@@ -17,7 +17,6 @@ function ArchitectureIntro({onFinish}:{onFinish:()=>void}){
   let seen=false;try{seen=sessionStorage.getItem("forma-intro-v2")==="seen"}catch{}
   if(seen||matchMedia("(prefers-reduced-motion: reduce)").matches){const f=requestAnimationFrame(complete);return()=>cancelAnimationFrame(f)}
   const ctx=gsap.context(()=>{
-   gsap.set(".a2-intro-house .a2-draw-primary path, .a2-intro-house .a2-draw-secondary path",{drawSVG:undefined});
    const paths=Array.from(rootEl.querySelectorAll<SVGPathElement>(".a2-intro-house path"));
    paths.forEach(path=>{const length=path.getTotalLength();gsap.set(path,{strokeDasharray:length,strokeDashoffset:length})});
    const tl=gsap.timeline({onComplete:complete});
